@@ -20,5 +20,5 @@ window.addEventListener("DOMContentLoaded", () => {
     tabs[index].classList.add("tabheader__item_active");
   };
 
-  showTabContent(1);
+  showTabContent(4);
 });
