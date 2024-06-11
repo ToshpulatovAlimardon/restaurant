@@ -5,7 +5,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const hideTabContents = () => {
     tabContents.forEach((element) => {
-      element.style.display = "none";
+      element.classList.add("hide");
+      element.classList.remove("show");
     });
 
     tabs.forEach((element) => {
@@ -15,10 +16,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
   hideTabContents();
 
-  const showTabContent = (index) => {
-    tabContents[index].style.display = "flex";
+  const showTabContent = (index = 0) => {
+    tabContents[index].classList.add("show", "fade");
+    tabContents[index].classList.remove("hide");
     tabs[index].classList.add("tabheader__item_active");
   };
 
-  showTabContent(4);
+  showTabContent();
+
+  tabParents.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (target && target.classList.contains("tabheader__item")) {
+      tabs.forEach((tab, index) => {
+        if (target === tab) {
+          hideTabContents();
+          showTabContent(index);
+        }
+      });
+    }
+  });
 });

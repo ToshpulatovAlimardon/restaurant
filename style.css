@@ -877,3 +877,24 @@ form button {
     opacity: 1;
   }
 }
+
+.show {
+	display: flex!important;
+}
+
+.hide {
+	display: none!important;
+}
+
+.fade {
+	animation: fade 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.1;
+	}
+	to {
+		opacity: 1;
+	}
+}
