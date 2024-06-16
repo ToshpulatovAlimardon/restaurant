@@ -21,9 +21,9 @@
 
   <body>
     <!-- Loader -->
-     <div class="loader-wrapper">
+    <div class="loader-wrapper">
       <span class="loader"></span>
-     </div>
+    </div>
 
     <!-- Header Start -->
     <header>
@@ -46,7 +46,7 @@
         <p>Here you can find Most delicacies food in the world</p>
         <div class="btn__group">
           <button class="button arrow">Read more</button>
-          <button class="button phone">Contact Us</button>
+          <button data-modal class="button phone">Contact Us</button>
         </div>
       </div>
     </header>
@@ -365,7 +365,7 @@
           <div style="display: flex; justify-content: center">
             <div class="btn__group">
               <button class="button arrow">Read more</button>
-              <button class="button phone">Contact Us</button>
+              <button data-modal class="button phone">Contact Us</button>
             </div>
           </div>
         </div>
@@ -438,7 +438,7 @@
                   dicta repellat cupiditate. Cupiditate corrupti illum,
                   necessitatibus saepe non ab placeat fugiat?
                 </p>
-                <button class="btn btn-third"><a href="#">CONTACT</a></button>
+                <button data-modal class="btn btn-third"><a href="#">CONTACT</a></button>
               </div>
             </div>
           </div>
@@ -498,7 +498,11 @@
     <footer id="footer">
       <p>
         Copyright &copy; 2024 All rights reserved | made by
-        <b> <a href="https://webdunyosi.netlify.app/" target="_blank"> webdunyosi</a> </b>
+        <b>
+          <a href="https://webdunyosi.netlify.app/" target="_blank">
+            webdunyosi</a
+          >
+        </b>
       </p>
     </footer>
 
@@ -507,7 +511,7 @@
       <div class="modal__dialog">
         <div class="modal__content">
           <form action="#">
-            <div class="modal__close">&times;</div>
+            <div data-modal-close class="modal__close">&times;</div>
             <div class="modal__title">Contact Us!</div>
             <input
               required
