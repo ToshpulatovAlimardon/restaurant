@@ -120,6 +120,7 @@ window.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("show");
     modal.classList.remove("hide");
     document.body.style.overflow = "hidden";
+    clearInterval(modalTimerId);
   }
 
   function closeModal() {
@@ -139,4 +140,12 @@ window.addEventListener("DOMContentLoaded", () => {
       closeModal();
     }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.code === "Escape" && modal.classList.contains("show")) {
+      closeModal();
+    }
+  });
+
+  const modalTimerId = setTimeout(openModal, 3000);
 });
