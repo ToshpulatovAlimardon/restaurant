@@ -133,4 +133,10 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   modalCloseBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 });
