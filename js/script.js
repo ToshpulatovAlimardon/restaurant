@@ -112,10 +112,12 @@ window.addEventListener("DOMContentLoaded", () => {
   // Modal
   const modalOpenBtns = document.querySelectorAll("[data-modal]"),
     modal = document.querySelector(".modal"),
-    modalCloseBtn = document.querySelector("[data-modal-close]");
+    modalCloseBtn = document.querySelector("[data-modal-close]"),
+    modalContent = document.querySelector(".modal__content");
 
   modalOpenBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
+      modalContent.classList.add("modal_fade");
       modal.classList.add("show");
       modal.classList.remove("hide");
       document.body.style.overflow = "hidden";

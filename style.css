@@ -899,6 +899,19 @@ form button {
   }
 }
 
+.modal_fade {
+  animation: modalFade .5s;
+}
+
+@keyframes modalFade {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .loader-wrapper {
   display: flex;
   justify-content: center;
