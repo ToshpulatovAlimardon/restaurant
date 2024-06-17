@@ -900,7 +900,7 @@ form button {
 }
 
 .modal_fade {
-  animation: modalFade .5s;
+  animation: modalFade 0.5s;
 }
 
 @keyframes modalFade {
